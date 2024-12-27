@@ -19,7 +19,7 @@ int main()
 
 	while (true)
 	{
-		std::cout << "\nвведите количкство уровнений в неравенстве:";
+		std::cout << "\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:";
 		std::cin >> colstroc;
 		if (colstroc > 0)
 		{
@@ -32,7 +32,7 @@ int main()
 	}
 	while (true)
 	{
-		std::cout << "\nвведите максимальное количество x в уровнении:";
+		std::cout << "\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ x пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ:";
 		std::cin >> colstolb;
 		if (colstolb > 0)
 		{
@@ -56,13 +56,13 @@ int main()
 		{
 			if (x < colstolb)
 			{
-				std::cout << "\nввод " << i + 1 << " уровнения\n";
-				std::cout << "\nвведите x" << x + 1 <<" вместе со знаком перед ним:";
+				std::cout << "\nпїЅпїЅпїЅпїЅ " << i + 1 << " пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ\n";
+				std::cout << "\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅ x" << x + 1 <<" пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ:";
 				std::cin >> nerav[i][x];
 			}
 			else
 			{
-				std::cout << "\nвведите чиму равно это выражение если число отрецательное писать с минусом:";
+				std::cout << "\nпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ:";
 				std::cin >> nerav[i][x];
 			}
 		}
@@ -86,11 +86,11 @@ double opred(double** masiv,double pov,double numb)
 			if (numb == colstolb)numb = 0;
 			for (size_t c = 0; c < colstolb; c++)
 			{
-				if (c = numb)
+				if (c == numb)
 				{
 					scop1 = scop1 * masiv[i][c];
 					numb++;
-
+					break;
 				}
 			}
 		} 
@@ -100,11 +100,11 @@ double opred(double** masiv,double pov,double numb)
 			if (numb - 1 == -1)numb = colstolb;
 			for (size_t c = 0; c < colstolb; c++)
 			{
-				if (c = numb-1)
+				if (c == numb-1)
 				{
 					scop2 = scop2 * masiv[i][c];
 					numb--;
-
+					break;
 				}
 			}
 		}
@@ -119,11 +119,11 @@ double opred(double** masiv,double pov,double numb)
 			if (numb == colstolb)numb=0;
 			for (size_t c = 0; c < colstolb; c++)
 			{
-				if (c = numb)
+				if (c == numb)
 				{
 					scop1 = scop1 * masiv[i][c];
 					numb++;
-
+					break;
 				}
 			}
 		}
@@ -134,11 +134,11 @@ double opred(double** masiv,double pov,double numb)
 			if (numb - 1 == -1)numb = colstolb;
 			for (size_t c = 0; c < colstolb; c++)
 			{
-				if (c = numb - 1)
+				if (c == numb - 1)
 				{
 					scop2 = scop2 * masiv[i][c];
 					numb--;
-
+					break;
 				}
 			}
 		}
